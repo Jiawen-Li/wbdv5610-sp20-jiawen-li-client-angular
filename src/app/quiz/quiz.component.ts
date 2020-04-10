@@ -8,6 +8,7 @@ import {QuestionServiceClient} from '../services/question.service.client';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  private quizId: any;
 
   constructor(private svc: QuestionServiceClient,
               private route: ActivatedRoute) { }
