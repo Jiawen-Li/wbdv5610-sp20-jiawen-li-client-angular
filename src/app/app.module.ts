@@ -7,10 +7,11 @@ import { CourseTableComponent } from './course-table/course-table.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { ModuleListComponent } from './module-list/module-list.component';
-import {CourseServiceClient} from "./services/CourseServiceClient";
-import {ModuleServiceClient} from "./services/ModuleServiceClient";
-import {LessonServiceClient} from "./services/LessonServiceClient";
+import {CourseServiceClient} from './services/CourseServiceClient';
+import {ModuleServiceClient} from './services/ModuleServiceClient';
+import {LessonServiceClient} from './services/LessonServiceClient';
 import { QuizzesComponent } from './quizzes/quizzes.component';
+import {QuizServiceClient} from './services/quiz.service.client';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { QuizzesComponent } from './quizzes/quizzes.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [CourseServiceClient, ModuleServiceClient,LessonServiceClient],
+  providers: [CourseServiceClient, ModuleServiceClient, LessonServiceClient, QuizServiceClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
