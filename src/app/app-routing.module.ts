@@ -5,6 +5,7 @@ import {CourseViewerComponent} from './course-viewer/course-viewer.component';
 
 
 const routes: Routes = [
+  {path: 'courses/:courseId/quizzes', component: QuizzesComponent},
   {path: '', component: CourseTableComponent},
   {path: 'courses', component: CourseTableComponent},
   {path: 'courses/:courseId/modules', component: CourseViewerComponent},
