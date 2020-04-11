@@ -10,6 +10,7 @@ export class MultipleChoiceComponent implements OnInit {
   constructor() { }
 
   @Input()
+  // question = {};
   question = {_id: '', title: '', question: '', answer: '', correct: '', choices: []};
   grading = false;
   // faCheck = faCheck;
