@@ -1,11 +1,16 @@
 <h3>Question Title: {{question.title}}</h3>
 <div *ngFor="let option of question.choices">
-  <label >
+  <label [class]="{
+  'correct': grading && option===question.correct,
+  'false':grading && question.answer === option && question.correct!==option
+  }">
     <input type="radio"
            value="{{option}}"
            [(ngModel)]="question.answer"
            name="{{question._id}}"/>
     {{option}}
+    <i [hidden]="!grading || question.correct !== option"  class="fa fa-check-circle"></i>
+    <i [hidden]="!grading || question.answer!==option || question.correct===option" class="fa fa-times-circle"></i>
   </label>
 </div>
 
