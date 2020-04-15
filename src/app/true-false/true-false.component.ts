@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-true-false',
@@ -12,7 +11,7 @@ export class TrueFalseComponent implements OnInit {
   }
 
   @Input()
-  question = {_id: '', title: '', question: '', correct: '', choices: [], type: ''};
+  question = {_id: '', title: '', question: '', correct: '', choices: [], type: '', answer: ''};
   @Input()
   answer = '';
   @Input()
@@ -23,7 +22,7 @@ export class TrueFalseComponent implements OnInit {
 
   submitAnswer = () => {
     this.answerChange.emit(this.answer);
-  }
+  };
 
   ngOnInit(): void {
   }

@@ -11,7 +11,7 @@ export class MultipleChoiceComponent implements OnInit {
   }
 
   @Input()
-  question = {_id: '', title: '', question: '', correct: '', choices: [], type: ''};
+  question = {_id: '', title: '', question: '', correct: '', choices: [], type: '', answer: ''};
   @Input()
   answer = '';
   @Input()
@@ -22,7 +22,7 @@ export class MultipleChoiceComponent implements OnInit {
 
   submitAnswer = () => {
     this.answerChange.emit(this.answer);
-  }
+  };
 
   ngOnInit(): void {
   }
