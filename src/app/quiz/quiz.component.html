@@ -18,5 +18,5 @@
 <button (click)="submitQuiz()">
   Submit Quiz
 </button>
-<div>Your Score:</div>
+<div [hidden]="!grading">Your Score: {{quizResult.score}}</div>
 
