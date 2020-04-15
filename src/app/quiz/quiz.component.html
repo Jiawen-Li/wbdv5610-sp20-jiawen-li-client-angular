@@ -5,7 +5,7 @@
       <app-multiple-choice
         [question]="question"
         [(answer)]="question.answer"
-        [grading]="grading" ]
+        [grading]="grading"
         *ngSwitchCase="'MULTIPLE_CHOICE'"></app-multiple-choice>
       <app-true-false
         [question]="question"
@@ -18,4 +18,5 @@
 <button (click)="submitQuiz()">
   Submit Quiz
 </button>
+<div>Your Score:</div>
 
